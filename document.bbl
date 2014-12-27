@@ -5,9 +5,42 @@ E~Brewer.
 \newblock {CAP twelve years later: How the "rules" have changed}.
 \newblock {\em Computer}, 45(2):23--29, 2012.
 
+\bibitem{Chang:2006:BDS:1267308.1267323}
+Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson~C. Hsieh, Deborah~A. Wallach,
+  Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert~E. Gruber.
+\newblock Bigtable: A distributed storage system for structured data.
+\newblock In {\em Proceedings of the 7th USENIX Symposium on Operating Systems
+  Design and Implementation - Volume 7}, OSDI '06, pages 15--15, Berkeley, CA,
+  USA, 2006. USENIX Association.
+
+\bibitem{DeCandia:2007:DAH:1323293.1294281}
+Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati,
+  Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall,
+  and Werner Vogels.
+\newblock Dynamo: Amazon's highly available key-value store.
+\newblock {\em SIGOPS Oper. Syst. Rev.}, 41(6):205--220, October 2007.
+
+\bibitem{fidge1988timestamps}
+C.~J. Fidge.
+\newblock Timestamps in message-passing systems that preserve the partial
+  ordering.
+\newblock {\em Proceedings of the 11th Australian Computer Science Conference},
+  10(1):56–66, 1988.
+
 \bibitem{Fox99harvest}
 Armando Fox and Eric~A. Brewer.
 \newblock Harvest, yield, and scalable tolerant systems.
 \newblock In {\em In HotOS-VII}. Society Press, 1999.
+
+\bibitem{Karger:1999kd}
+David~R Karger, Alex Sherman, Andy Berkheimer, Bill Bogstad, Rizwan Dhanidina,
+  Ken Iwamoto, Brian Kim, Luke Matkins, and Yoav Yerushalmi.
+\newblock {Web Caching with Consistent Hashing.}
+\newblock {\em Computer Networks ()}, pages 1203--1213, 1999.
+
+\bibitem{Lamport:1978jq}
+Leslie Lamport.
+\newblock {Time, Clocks, and the Ordering of Events in a Distributed System.}
+\newblock {\em Commun. ACM ()}, 21(7):558--565, 1978.
 
 \end{thebibliography}

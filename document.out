@@ -6,7 +6,9 @@
 \BOOKMARK [2][-]{subsection.4.1}{Regu\233a sp\363jnosci.}{section.4}% 6
 \BOOKMARK [1][-]{section.5}{Apache Cassandra.}{}% 7
 \BOOKMARK [2][-]{subsection.5.1}{Liniowa skalowalnosc.}{section.5}% 8
-\BOOKMARK [2][-]{subsection.5.2}{Natywny model danych.}{section.5}% 9
-\BOOKMARK [2][-]{subsection.5.3}{Model CQL.}{section.5}% 10
-\BOOKMARK [2][-]{subsection.5.4}{Przypadki uzycia.}{section.5}% 11
-\BOOKMARK [1][-]{section.6}{Motywacja.}{}% 12
+\BOOKMARK [2][-]{subsection.5.2}{Replikacja danych}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.3}{Natywny model danych.}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.4}{Model CQL.}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.5}{Modelowanie danych}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Przypadki uzycia.}{}% 13
+\BOOKMARK [2][-]{subsection.6.1}{Przypadek I20 Water}{section.6}% 14

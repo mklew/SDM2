@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex document"] 1419703207 "document.aux" "document.bbl" "document" 1419703454
+["bibtex document"] 1419716579 "document.aux" "document.bbl" "document" 1419716580
   "/usr/local/texlive/2012/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "bibliography.bib" 1419700289 645 5718f842d2994a4f51e5a3d953c0c60c ""
-  "document.aux" 1419703454 2130 34875b4fba8640919114fd1c1304f0fb ""
+  "bibliography.bib" 1419709751 3365 a8acdefa2781bec9082fddedac5f92f7 ""
+  "document.aux" 1419716580 3167 9ad2377f0ad4c92bac2a4e3923e0128a ""
   "document.bcf" 0 -1 0 ""
   (generated)
   "document.blg"
   "document.bbl"
-["pdflatex"] 1419703453 "document.tex" "document.pdf" "document" 1419703454
-  "./fig-actor-hierarchy.png" 1416074867 73681 917d4b9461a41979112c43dd95dbd712 ""
+["pdflatex"] 1419716579 "document.tex" "document.pdf" "document" 1419716580
+  "./pierscien.png" 1419711205 114405 70e141b1f563ff0ac96feb37907cbe76 ""
   "/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/gettitlestring.sty" 1303254447 8237 52810bdb4db2270e717422560a104aea ""
@@ -69,13 +69,13 @@
   "/usr/local/texlive/2012/texmf-dist/tex/latex/titlesec/titlesec.sty" 1324083561 37083 54a2e11f0f208916a9976d9e4837d144 ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/tools/multicol.sty" 1312409015 26766 56c30c5bea3083b5a0d6fc2ce0063096 ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty" 1264379145 21932 e3a9cf32ee9b853b42be14c2f25b873c ""
-  "document.aux" 1419703454 2130 34875b4fba8640919114fd1c1304f0fb ""
-  "document.bbl" 1419703207 364 dd845d6f68b835deb712d7a476efe1bc "bibtex document"
-  "document.out" 1419703454 732 b0e40d2a2b4936a9df2482f2b1f09880 ""
-  "document.tex" 1419703452 12521 39b289dab928238dd99af2f1d77e7318 ""
+  "document.aux" 1419716580 3167 9ad2377f0ad4c92bac2a4e3923e0128a ""
+  "document.bbl" 1419716579 1848 c98597ac66cf5b70f6f318d7af17fd5b "bibtex document"
+  "document.out" 1419716580 876 fbdb6ed717c7863c792250ed41cc059f ""
+  "document.tex" 1419716576 24139 4dfaed14bf12bcd78be1fbb2a8964bad ""
   (generated)
-  "document.aux"
   "document.out"
+  "document.aux"
   "document.toc"
   "document.log"
   "document.pdf"
