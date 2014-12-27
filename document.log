@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  17 DEC 2014 09:35
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 DEC 2014 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -18,8 +18,8 @@ lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian,
 welsh, loaded.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -590,27 +590,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip46
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/lettrine/lettrine.sty
-File: lettrine.sty 2007/08/08 v1.62 (Daniel Flipo)
-\c@DefaultLines=\count118
-\DefaultFindent=\dimen144
-\DefaultNindent=\dimen145
-\DefaultSlope=\dimen146
-\L@lbox=\box54
-\L@tbox=\box55
-\c@L@lines=\count119
-\L@Pindent=\dimen147
-\L@Findent=\dimen148
-\L@Nindent=\dimen149
-\L@lraise=\dimen150
-\L@first=\dimen151
-\L@next=\dimen152
-\L@slope=\dimen153
-\L@height=\dimen154
-\LettrineWidth=\dimen155
-
-Loading lettrine.cfg
-(/usr/local/texlive/2012/texmf-dist/tex/latex/lettrine/lettrine.cfg))
 (/usr/local/texlive/2012/texmf-dist/tex/latex/paralist/paralist.sty
 Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
 \pltopsep=\skip47
@@ -629,21 +608,18 @@ Package: abstract 2009/06/08 v1.2a configurable abstracts
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box56
+\ttl@box=\box54
 \beforetitleunit=\skip56
 \aftertitleunit=\skip57
-\ttl@plus=\dimen156
-\ttl@minus=\dimen157
+\ttl@plus=\dimen144
+\ttl@minus=\dimen145
 \ttl@toksa=\toks22
-\titlewidth=\dimen158
-\titlewidthlast=\dimen159
-\titlewidthfirst=\dimen160
+\titlewidth=\dimen146
+\titlewidthlast=\dimen147
+\titlewidthfirst=\dimen148
 )
    defining Unicode char U+00A0 (decimal 160)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/titlesec/block.tss
-File: block.tss 2011/12/15
-)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip58
 \f@ncyO@elh=\skip59
@@ -657,42 +633,43 @@ File: block.tss 2011/12/15
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 62.
+less on input line 83.
 
 (./document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Try loading font information for T1+pplx on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Try loading font information for T1+pplx on input line 104.
+
  (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1pplx.fd
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
 ) (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
-\scratchdimen=\dimen161
-\scratchbox=\box57
-\nofMPsegments=\count121
-\nofMParguments=\count122
+\scratchcounter=\count118
+\scratchdimen=\dimen149
+\scratchbox=\box55
+\nofMPsegments=\count119
+\nofMParguments=\count120
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count123
-\MPscratchDim=\dimen162
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen150
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -709,8 +686,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\big@size=\dimen163
-LaTeX Info: Redefining \microtypecontext on input line 83.
+\big@size=\dimen151
+LaTeX Info: Redefining \microtypecontext on input line 104.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -731,25 +708,24 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* hratio: 1:1
 * modes: 
-* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
-* v-part:(T,H,B)=(91.04881pt, 652.59138pt, 101.40665pt)
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=418.25368pt
-* \textheight=652.59138pt
-* \oddsidemargin=17.3571pt
-* \evensidemargin=17.3571pt
-* \topmargin=-18.22118pt
+* \textwidth=455.24411pt
+* \textheight=674.33032pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=35.0pt
+* \marginparwidth=50.0pt
 * \marginparsep=10.0pt
-* \columnsep=20.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \columnsep=22.76219pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -763,115 +739,110 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 83.
+\AtBeginShipoutBox=\box56
+Package hyperref Info: Link coloring OFF on input line 104.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count126
+\c@section@level=\count124
 )
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
+LaTeX Info: Redefining \ref on input line 104.
+LaTeX Info: Redefining \pageref on input line 104.
+LaTeX Info: Redefining \nameref on input line 104.
 
 (./document.out) (./document.out)
 \@outlinefile=\write3
 \openout3 = `document.out'.
 
-LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <24> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 86.
-LaTeX Font Info:    Try loading font information for OT1+pplx on input line 86.
-
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 107.
+LaTeX Font Info:    Try loading font information for OT1+pplx on input line 107
+.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 86.
-
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 107
+.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 86.
-
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 107
+.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 86.
-
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 107
+.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 86.
-
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 107
+.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplx/m/sc/14.4'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <12> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 93.
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplx/m/sc/12'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for OMS+pplx on input line 115
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 123.
+LaTeX Font Info:    Try loading font information for OMS+pplx on input line 143
 .
-LaTeX Font Info:    No file OMSpplx.fd. on input line 115.
+LaTeX Font Info:    No file OMSpplx.fd. on input line 143.
 
 
 LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 115.
+(Font)              for symbol `textbullet' on input line 143.
 
 [1
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] <./fig-actor-hierarchy.png, id=68, 508.14844pt x 357.58594pt>
+[2] <./fig-actor-hierarchy.png, id=64, 508.14844pt x 357.58594pt>
 File: ./fig-actor-hierarchy.png Graphic file (type png)
 
 <use ./fig-actor-hierarchy.png>
-Package pdftex.def Info: ./fig-actor-hierarchy.png used on input line 165.
+Package pdftex.def Info: ./fig-actor-hierarchy.png used on input line 193.
 (pdftex.def)             Requested size: 182.93329pt x 128.73083pt.
- [4 <./fig-actor-hierarchy.png>] (./document.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 196.
+ (./document.bbl [3 <./fig-actor-hierarchy.png>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 260.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 260.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 227.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 227.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 260.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 260.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 0C43FB0A5AB73E475D595019B33398FA;643.
+(rerunfilecheck)             Checksum: 3EC04057A975DCC9E37DFACF528115B2;654.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 227.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 260.
  ) 
 Here is how much of TeX's memory you used:
- 9905 strings out of 493488
- 149609 string characters out of 3141326
- 359108 words of memory out of 3000000
- 12773 multiletter control sequences out of 15000+200000
- 63270 words of font info for 258 fonts, out of 3000000 for 9000
+ 9780 strings out of 493488
+ 147850 string characters out of 3141326
+ 360801 words of memory out of 3000000
+ 12703 multiletter control sequences out of 15000+200000
+ 52300 words of font info for 229 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,10n,43p,846b,554s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,10n,43p,849b,627s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2012/texm
-f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-dist/
-fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (5 pages, 148565 bytes).
+xlive/2012/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2012/tex
+mf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on document.pdf (4 pages, 145001 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
- 52830 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 95 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
+ 38494 words of extra memory for PDF output out of 42996 (max. 10000000)
 
