@@ -89,7 +89,7 @@
 % TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\title{\vspace{15mm}\fontsize{14pt}{10pt}\selectfont\textbf{Model aktorów - prostsza skalowalność, odporność na awarie, współbieżność i komunikacja zdalna}} % Article title
+\title{\vspace{15mm}\fontsize{14pt}{10pt}\selectfont\textbf{Problematyka rozproszonych systemów - przypadek \emph{Apache Cassandra}}} % Article title
 
 \author{
 {\fontsize{12pt}{1.2em}\selectfont Marek Lewandowski} \\
@@ -123,15 +123,35 @@
 \section*{Streszczenie.}
 
 \textit{
-Artykuł omawia model aktorów oraz bibliotekę Akka. Model aktorów pozwala na łatwiejsze pisanie współbieżnych i wielowątkowych 
-programów, dzięki wyższemu poziomowi abstrakcji od wątków i innych prymitywów. Artykuł omawia zastosowanie modelu aktorów w wysoko dostępnych rozproszonych systemach.	
+Artykuł omawia nierelacyjne bazy danych i twierdzenia z nimi związane takie jak \emph{CAP, BASE}. W szczególności omawia cechy szczególne i budowę bazy \emph{Apache Cassandra}. \emph{Apache Cassandra} jest kanoniczną nierelacyjną bazą danych, której zrozumienie znacząco ułatwia zrozumienie większości pozostałych nierelacyjnych baz danych.
 }
 
+\section{Motywacja.}
+Nierelacyjne bazy danych powstały, w celu rozwiązania nowego rodzaju problemów, którym nie były w stanie sprostać tradycyjne bazy danych. Problemy to bardzo duża, szybko przyrastająca ilość danych oraz potrzeba obsługi równie dużego obciążenia systemu.
 
+Ilość danych, wyrażana może być, aż peta bajtach ($1PB=1000 TB$), co może sprawiać problemy jeśli chcielibyśmy obsłużyć taką ilość danych jednym komputerem. W związku z tym poruszamy się po dziedzinie klastrów serwerów, a nie pojedynczych maszyn. Pojedyncza maszyna to również pojedynczy punkt awarii. Takie i inne problemy adresowane są przez nierelacyjne bazy danych.
 
+Często podczas omawiania nierelacyjnych baz danych przytacza się przypadek firmy \emph{Amazon}. \emph{Amazon} oświadczył, że wzrost czasu odpowiedzi w ich serwisie o 0.1 sekundy powoduje spadek sprzedaży o 1\%. Wysoka wydajność i niski czas dostępu są możliwe dzięki nierelacyjnym bazom danych oraz innym pobocznym technikom. Warto zatem pamiętać o biznesowej wartości tych rozwiązań, wiedzieć jak działają i jakim prawom podlegają.
 
-%\end{abstract}
+\section{Spójność, a dostępność.}
 
+\section{Twierdzenie CAP.}
+
+\subsection{Zastosowanie dzisiaj.}
+
+\section{Parametry nierelacyjnych baz danych.}
+
+\subsection{Reguła spójności.}
+
+\section{Apache Cassandra.}
+
+\subsection{Liniowa skalowalność.}
+
+\subsection{Natywny model danych.}
+
+\subsection{Model CQL.}
+
+\subsection{Przypadki użycia.}
 
 \section{Motywacja.}
 

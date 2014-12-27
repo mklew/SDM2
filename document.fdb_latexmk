@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex document"] 1419692412 "document.aux" "document.bbl" "document" 1419692413
+["bibtex document"] 1419696986 "document.aux" "document.bbl" "document" 1419696987
   "/usr/local/texlive/2012/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "bibliography.bib" 1418566883 223 863f817e4decfc816fb29d00d454e530 ""
-  "document.aux" 1419692413 1931 4f38d410e0c834a8fca9da514e058f39 ""
+  "document.aux" 1419696987 3112 f348053d7939a0bde66b649db598f3e5 ""
   "document.bcf" 0 -1 0 ""
   (generated)
   "document.blg"
   "document.bbl"
-["pdflatex"] 1419692412 "document.tex" "document.pdf" "document" 1419692413
+["pdflatex"] 1419696986 "document.tex" "document.pdf" "document" 1419696987
   "./fig-actor-hierarchy.png" 1416074867 73681 917d4b9461a41979112c43dd95dbd712 ""
   "/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
@@ -69,10 +69,10 @@
   "/usr/local/texlive/2012/texmf-dist/tex/latex/titlesec/titlesec.sty" 1324083561 37083 54a2e11f0f208916a9976d9e4837d144 ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/tools/multicol.sty" 1312409015 26766 56c30c5bea3083b5a0d6fc2ce0063096 ""
   "/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty" 1264379145 21932 e3a9cf32ee9b853b42be14c2f25b873c ""
-  "document.aux" 1419692413 1931 4f38d410e0c834a8fca9da514e058f39 ""
-  "document.bbl" 1419692412 245 1736d2300ac78a5117ccc1274c549314 "bibtex document"
-  "document.out" 1419692413 654 3ec04057a975dcc9e37dfacf528115b2 ""
-  "document.tex" 1419692410 16379 5c2e094f054f57212e59bb336c673ce9 ""
+  "document.aux" 1419696987 3112 f348053d7939a0bde66b649db598f3e5 ""
+  "document.bbl" 1419696986 245 1736d2300ac78a5117ccc1274c549314 "bibtex document"
+  "document.out" 1419696987 1352 8f501ebd892c2df9ecb49c1a11cbc4ea ""
+  "document.tex" 1419696984 17857 6c0eea22f7c972a1400c80cb3e243f08 ""
   (generated)
   "document.aux"
   "document.out"
