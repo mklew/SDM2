@@ -1,8 +1,13 @@
 \begin{thebibliography}{1}
 
-\bibitem{Hewitt:1973vp}
-Carl Hewitt, Peter Bishop, and Richard Steiger.
-\newblock {A Universal Modular ACTOR Formalism for Artificial Intelligence.}
-\newblock {\em IJCAI}, pages 235--245, 1973.
+\bibitem{Brewer:2012ba}
+E~Brewer.
+\newblock {CAP twelve years later: How the "rules" have changed}.
+\newblock {\em Computer}, 45(2):23--29, 2012.
+
+\bibitem{Fox99harvest}
+Armando Fox and Eric~A. Brewer.
+\newblock Harvest, yield, and scalable tolerant systems.
+\newblock In {\em In HotOS-VII}. Society Press, 1999.
 
 \end{thebibliography}

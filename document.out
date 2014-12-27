@@ -1,7 +1,7 @@
 \BOOKMARK [1][-]{section.1}{Motywacja.}{}% 1
-\BOOKMARK [1][-]{section.2}{Sp\363jnosc, a dostepnosc.}{}% 2
+\BOOKMARK [1][-]{section.2}{Sp\363jnosc i dostepnosc}{}% 2
 \BOOKMARK [1][-]{section.3}{Twierdzenie CAP.}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Zastosowanie dzisiaj.}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.1}{Twierdzenie dzisiaj.}{section.3}% 4
 \BOOKMARK [1][-]{section.4}{Parametry nierelacyjnych baz danych.}{}% 5
 \BOOKMARK [2][-]{subsection.4.1}{Regu\233a sp\363jnosci.}{section.4}% 6
 \BOOKMARK [1][-]{section.5}{Apache Cassandra.}{}% 7
@@ -10,13 +10,3 @@
 \BOOKMARK [2][-]{subsection.5.3}{Model CQL.}{section.5}% 10
 \BOOKMARK [2][-]{subsection.5.4}{Przypadki uzycia.}{section.5}% 11
 \BOOKMARK [1][-]{section.6}{Motywacja.}{}% 12
-\BOOKMARK [2][-]{subsection.6.1}{Dostepnosc.}{section.6}% 13
-\BOOKMARK [2][-]{subsection.6.2}{Komunikacja zdalna.}{section.6}% 14
-\BOOKMARK [2][-]{subsection.6.3}{Skalowalnosc.}{section.6}% 15
-\BOOKMARK [1][-]{section.7}{Model aktor\363w.}{}% 16
-\BOOKMARK [1][-]{section.8}{Biblioteka Akka.}{}% 17
-\BOOKMARK [2][-]{subsection.8.1}{Przezroczystosc lokalizacji.}{section.8}% 18
-\BOOKMARK [2][-]{subsection.8.2}{Hierarchie.}{section.8}% 19
-\BOOKMARK [2][-]{subsection.8.3}{Rozproszenie.}{section.8}% 20
-\BOOKMARK [2][-]{subsection.8.4}{Strategie nadzoru.}{section.8}% 21
-\BOOKMARK [1][-]{section.9}{Podsumowanie.}{}% 22

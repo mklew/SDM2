@@ -85,6 +85,9 @@
 \renewcommand{\abstractname}{Streszczenie.}    % clear the title
 \renewcommand{\absnamepos}{empty} % originally center
 \setlength{\parindent}{0.4cm}
+
+ \setlength{\parskip}{0mm}
+
 %----------------------------------------------------------------------------------------
 % TITLE SECTION
 %----------------------------------------------------------------------------------------
@@ -133,11 +136,41 @@ Ilość danych, wyrażana może być, aż peta bajtach ($1PB=1000 TB$), co może
 
 Często podczas omawiania nierelacyjnych baz danych przytacza się przypadek firmy \emph{Amazon}. \emph{Amazon} oświadczył, że wzrost czasu odpowiedzi w ich serwisie o 0.1 sekundy powoduje spadek sprzedaży o 1\%. Wysoka wydajność i niski czas dostępu są możliwe dzięki nierelacyjnym bazom danych oraz innym pobocznym technikom. Warto zatem pamiętać o biznesowej wartości tych rozwiązań, wiedzieć jak działają i jakim prawom podlegają.
 
-\section{Spójność, a dostępność.}
+\section{Spójność i dostępność}
+W klasycznych bazach danych, często słyszymy o tym, że baza jest spójna. Taka spójność oznacza, że wszystkie mechanizmy w bazie takie jak więzy integralności, klucze obce, ograniczenia na kolumny są spełnione. Chcę przedstawić inną definicję spójności.
+
+Spójność oznacza jedną wersję danych, a więc wszystkie takie same dane, są zawsze w identycznej wersji. Dostępność rozumiana jest jako zdolność systemu do obsługi żądania zapisu/odczytu danych i zwrócenia odpowiedzi. 
+
+\emph{ACID} charakteryzuje klasyczne bazy danych, które posiadają bardzo wysoką spójność. \emph{BASE} to akronim, który należy omówić. 
+
+\begin{compactitem}
+  \item większość danych dostępna przez cały czas (ang. Basically Available)
+  \item dane wystarczająco świeże (ang. Soft state)
+  \item osiągnięcie spójności odsunięte w czasie, ale osiągalne (ang. Eventually consistent)
+\end{compactitem}
+
+\emph{ACID} i \emph{BASE} reprezentują dwa podejścia projektowe po przeciwnych końcach spektrum spójność\dywiz dostępność. Naturalnie \emph{ACID} znajduje się po stronie spójności i reprezentuje klasyczne podejście do baz danych. \emph{BASE} znajduje się po przeciwnej stronie spektrum i reprezentuje systemy z dużą dostępnością. Dzięki tym modelom wybór pomiędzy dostępnością, a spójnością jest jawny.
+
 
 \section{Twierdzenie CAP.}
+Brewer opublikował w 1999 roku \cite{Fox99harvest} twierdzenie przedstawiające wybór dwóch z trzech cech w rozproszonych bazach danych. Dwie cechy już znamy. Należy wytłumaczyć czym jest odporność na partycje. 
 
-\subsection{Zastosowanie dzisiaj.}
+Partycja w rozprosznym systemie występuje, wtedy gdy część węzłów w klastrze nie ma łączności z co najmniej jednym węzłem, inaczej mówiąc klaster jest podzielony na dwie części, które nie mogą się ze sobą komunikować. Taka sytuacja może wystąpić w co najmniej dwóch przypadkach. Część maszyn może ulec awarii i tym samym zniknie z klastra na długi czas, a więc będzie niedostępna z punktu widzenia pozostałych maszyn. Inną możliwością jest brak łączności spowodowany awarią sieci. Z punktu widzenia maszyn w klastrze obie sytuacje są identyczne i nie da się ich rozróżnić. W obu tych sytuacjach występuje partycja rozdzielająca maszyny na dwie grupy.
+ Twierdzenie Brewera mówi, że można mieć jedynie dwie cechy z poniższych:
+\begin{compactitem}
+  \item spójność,
+  \item dostępność,
+  \item odporność na partycje.
+\end{compactitem}
+
+W przypadku rozproszonych systemów brak odporności na partycje to pojedyczny punkt awarii. Wystarczy sobie wyobrazić, że pojedyncza maszyna ulega awarii, a baza nie jest w stanie dalej funkcjonować. Z tego powodu rozważa się wybór pomiędzy dostępnością, a spójnością. Odporność na partycje powinna być zawsze. Można zatem mówić o binarnym wyborze.
+
+Binarny wybór został zaprezentowany w oryginalnej postaci twierdzenia. Przez ponad dekadę powstało wiele typów systemów, które skupiają się na innych kombinacjach właściwości. 
+\subsection{Twierdzenie dzisiaj.} Wokół twierdzenia pojawiło się wiele nieporozumień. Przez lata odkryto sporo niuansów. Właściwości nie są binarne, a bliżej im do wartości ciągłych. Dostępność jest w zakresie procentowym. Istnieje wiele poziomów spójności. Węzły w klastrze mogą nie zgadzać się co do tego czy partycja faktycznie występuje. Autor opublikował 12 lat później artykuł \cite{Brewer:2012ba}, który rozwiewa większość wątpliwości.
+
+Dzisiaj możemy przedstawić twierdzenie w lepszy sposób. Podczas wystąpienia partycji niemożliwa jest idealna spójność i idealna dostępność. Dzięki specjalnej obsłudze systemu podczas partycji, można mieć więcej niż tylko jedną cechę. Wymaga to użycia odpowiednik technik. Jedną z technik jest ograniczenie możliwych operacji, tylko do tych, które nie zniszczą spójności. Przykładem rozprosznego systemu, który stosuje taką technikę jest \emph{Google Docs}, który podczas braku połączenia (partycji), udostępnia tylko część narzędzi tesktowych. 
+
+Jeśli partycja nie występuje system może mieć idealną dostępność i spójność. Dopiero podczas wystąpienia partycji należy dokonać wyboru pomiędzy spójnością, a dostępnością lub mieć specjalny tryb operacji podczas partycji. Nie dokonanie wyboru w krótkim czasie to wybór spójności, ponieważ żądanie nie zostanie obsłużone w odpowiednim czasie, a więc z perspektywy klienta system nie będzie dostępny.
 
 \section{Parametry nierelacyjnych baz danych.}
 
@@ -155,57 +188,6 @@ Często podczas omawiania nierelacyjnych baz danych przytacza się przypadek fir
 
 \section{Motywacja.}
 
-Zacznijmy od przedstawienia kilku powodów, dlaczego warto zdecydować się na model aktorów.
-Jednym z głównych powodów, dla których tworzenie współbieżnych programów jest trudne, jest \emph{stan}, a dokładnie \emph{zmienny współdzielony stan}. Weźmy za przykład konto bankowe, w którym stanem jest aktualne saldo na rachunku. Aby operacje takie jak wpłaty, wypłaty, przelewy i inne wykonywały się poprawnie, muszą mieć dostęp do poprawnego stanu salda, a zmiany salda z tych operacji nie mogą być nadpisane przez inne operacje. Sprowadza się to do ogólnie znanej synchronizacji.
-
-Istnieje wiele różnych technik synchronizacji. Do podstawowych należą prymitywy synchronizacyjne, takie jak:
-\begin{compactitem}
-\item semafory,
-\item muteksy,
-\item monitory.
-\end{compactitem}
-Każdy z nich pozwala na synchronizację, która uchroni stan, ale poprawna synchronizacja nie należy do najprostszych zadań, zwłaszcza w bardzo współbieżnych programach. Trzeba wiedzieć, w jakiej kolejności zajmować blokady, w jakiej kolejności je zwalniać; można ich zająć za dużo lub za mało, oraz trzeba wiedzieć, co tak naprawdę w danej sytuacji powinno być chronione. Łatwo w takich przypadkach popełnić błąd, który może doprowadzić do zakleszczeń, zagłodzeń lub walki o zasoby. 
-
-Należy zauważyć, że jeśli stan nie ulega żadnych zmianom, to nie ma potrzeby synchronizacji, a zatem znikają wszystkie problemy dotyczące synchronizacji. Używanie tak niskopoziomowych mechanizmów jak wątki, blokady, semafory, jest problematyczne dla programisty, ze względu na synchronizację. Potrzeba zatem czegoś więcej, potrzeba lepszej abstrakcji, która pozwoli uniknąć niskopoziomowych problemów.
-
-\subsection{Dostępność.}
-
-Większość systemów powinna mieć wysoką dostępność w ciągu dnia, tygodnia, roku. W przeciwnym wypadku tracimy klientów, a co za tym idzie -pieniądze. 
-
-Systemy mają różną rangę dostępności liczoną w tzw. dziewiątkach. $99\%$ dostępności oznacza, że na rok system może być niedostępny przez $3.65$ dni, czyli $1.68$ godzin na tydzień. Taki system ma kategorię dostępności w wysokości dwóch dziewiątek. 
-
-Systemy telekomunikacyjne mają nawet siedem dziewiątek, co pozwala na przestój w tygodniu w wymiarze $0.0605$ sekund. Są to systemy działające praktycznie ciągle, które nigdy się nie zatrzymują. W jaki sposób zrealizować system z wysokim poziomem dostępności?
-
-Istnieje kilka metod zapewnienia dostępności systemów. Można spróbować redundancji sprzętu, ale takie rozwiązanie marnuje zasoby oraz nie jest skalowalne. Inną metodą jest stworzenie systemu, który jest odporny na błędy i samoleczący się.
-
-Systemy samoleczące się nie zakładają, że sytuacje fatalne nie występują. One po prostu sobie z nimi radzą. \mbox{W klasycznym} przypadku, gdy używamy jedynie wątków, musimy chronić się przed błędami, które zostaną wyeskalowane na poziom wątku, ponieważ gdy tak się stanie, to nie mamy możliwości reakcji. W praktyce oznacza to, że w kodzie programu jest bardzo dużo instrukcji typu \emph{try catch}, które ,,łapią'' wszystkie możliwe wyjątki, aby tylko wątek nie wybuchł. Jednak takie rozwiązanie na nie wiele się zda w przypadku rozproszonego systemu, w którym np. awarii ulegnie jeden z węzłów. Nikt wtedy się o tym nie dowie. Potrzeba zatem mechanizmu, który pozwala sobie radzić z błędami, a więc pozwala na tworzenie samoleczących się systemów.
-
-\subsection{Komunikacja zdalna.}
-Klasyczne rozwiązania, takie jak \emph{RPC}, dają iluzję bezpieczeństwa, chowając złożone mechanizmy przed programistą. Programista dostaje mechanizm, który wygląda jak proste wołanie metody, ale z ceną braku możliwości obsługi problemów z siecią. Problemy z siecią nie należą do rzadkości. Przepustowość jest ograniczona, topologia sieci może się zmienić, występują spore opóźnienia. Są to problemy, którym po prostu należy stawić czoła, a zatem chcemy mieć możliwość radzenia sobie z nimi. 
-
-\subsection{Skalowalność.}
-Skalowalność to zdolność systemu do obsłużenia rosnącego obciążenia. Zazwyczaj chcemy skalować horyzontalnie, a więc dodawać kolejne maszyny i w ten sposób obsługiwać większe obciążenie. 
-
-Aby wykorzystać pełne możliwości pojedynczego komputera i wszystkich procesorów potrzeba także tworzyć współbieżne programy. Prawo Amdahla mówi o tym, gdzie jest limit przyspieszenia systemu w zależności od tego, w jakiej części jest on współbieżny. Jeśli program jest w $90\%$ współbieżny, to limit 10-krotnego przyspieszenia zostanie osiągnięty dla $1024$ procesorów. Dla $50\%$ 2-krotne przyspieszenie jest dla $16$ procesorów. Dalsze zwiększanie liczby procesorów nic nie da. Wniosek jest taki, że system powinien być jak najbardziej współbieżny, aby pozwalał w pełni korzystać ze wszystkich procesorów.
-
-\section{Model aktorów.}
-Model aktorów ma swoje początki teoretyczne w publikacji Carla Hewitta \cite{Hewitt:1973vp}. Jest to dość prosty koncepcyjnie model. Występuje w nim byt \emph{aktor}, który porozumiewa się z innymi aktorami tylko poprzez \emph{wiadomości}. Każdy aktor posiada swoją skrzynkę na wiadomości, z której to sekwencyjnie pobiera wiadomość i ją przetwarza. Aktor działa tylko, gdy przetwarza wiadomość - oznacza to, że aktor nie zajmuje zasobów, jeśli nie ma nic do zrobienia. Wysłanie wiadomości jest nieblokujące. Przetwarzanie jest asynchroniczne. Komunikacja jest jednokierunkowa - na wiadomość nie trzeba odpowiadać.
-
-Aktor enkapsuluje w sobie stan oraz zachowanie. Stan jest chroniony z definicji, ponieważ jest modyfikowany tylko i wyłącznie przez aktora, który operuje na wiadomościach sekwencyjnie, a więc nie ma potrzeby synchronizacji.
-
-Zachowanie jest zdefiniowane na poziomie aplikacji, poprzez odpowiedni protokół, który programista nadaje wiadomościom. Aktorzy tworzą hierarchię rodzic-dziecko. Każdy aktor może stworzyć innego aktora, dla którego staje się rodzicem. 
-
-Rozwiązywanie problemów w modelu aktorów można rozpatrywać w podobny sposób, jak gdyby grupa ludzi miała rozwiązać ten problem. Prosty problem może być rozwiązany przez jedną, bądź kilka osób. Przy większej liczbie osób dość naturalnie pojawią się grupy, które będą pracować razem. Możliwe, że grupy będą miały kogoś, kto będzie nimi kierował, a zatem będzie istnieć hierarchia. Jak mówi Carl Hewitt, jeśli problem jest zbyt skomplikowany, to należy dodać więcej aktorów i rozbić go na mniejsze problemy.
-
-\section{Biblioteka Akka.}
-Akka jest biblioteką implementującą model aktorów. Blisko jej do implementacji aktorów z języka Erlang. Można z niej korzystać z języka Java oraz Scala. Charakteryzuje się tym, że aktor ma bardzo małe wymagania pamięciowe. Na 1Gb sterty można stworzyć 2.5 miliona aktorów. Sama biblioteka została napisana z myślą o rozproszonych systemach, a zatem jest rozproszona od podstaw. Lokalne wysyłanie wiadomości między aktorami zostało jednak zoptymalizowane. 
-
-\subsection{Przezroczystość lokalizacji.}
-Ten mechanizm zapewnia łatwe rozproszenie systemu. Każdy aktor jest dostępny dla innego aktora przez specjalny obiekt \emph{ActorRef} - referencja na aktora. Jest to też zabezpieczenie przed bezpośrednią modyfikacją stanu aktora. Nie wiadomo zatem, czy aktor pod daną referencją jest aktorem lokalnym (działającym na tej samej maszynie JVM), czy aktorem dostępnym na innej maszynie.
-
-\subsection{Hierarchie.}
-Aktorzy tworzą hierarchię. Hierarchia jest drzewem, w którym korzeniem jest aktor specjalnego typu. Ten aktor nigdy nie może umrzeć. Chroni się go poprzez hierarchię aktorów pod nim. Na ilustracji widzimy, że aktor Foo jest rodzicem dla aktorów A i C. Do aktora można się również dostać poprzez jego adres. Adres jest ścieżką względem korzenia. Przykładowe ścieżki do aktorów zostały zaznaczone w prostokątach.
-
 
  \begin{figure}[H]
   \fbox{
@@ -217,17 +199,6 @@ Aktorzy tworzą hierarchię. Hierarchia jest drzewem, w którym korzeniem jest a
   \end{center}
   
 \end{figure}
-
-\subsection{Rozproszenie.}
-Aby rozproszyć system używając \mbox{Akka}, należy jedynie zmodyfikować jego konfigurację. Nie ruszamy zatem żadnej linii kodu. Konfiguracji podlega struktura hierarchii. Należy skonfigurować, jakie poddrzewo jest gdzie uruchamiane. Dla ilustacji $/Foo$ może dotyczyć jednej maszyny, a $/Bar$ drugiej. 
-
-\subsection{Strategie nadzoru.}
-Strategie nadzoru pozwalają na samoleczenie się systemu i poprawną obsługę błędów. Każdy rodzic ustala, jaka jest strategia nadzoru dla jego dzieci. Może to być Jeden-Za-Jeden lub Wszyscy-Za-Jednego. W przypadku Jeden-Za-Jeden, gdy aktor umrze, np. wskutek nieobsłużonego wyjątku, tylko ten aktor zostanie uruchomiony ponowie w nowym wcieleniu - a zatem ze stanem początkowym. W drugim przypadku wszystkie dzieci danego aktora zostaną uruchomione ponownie. Sama akcja, jak ponowne uruchomienie, to tylko przykład. Można wykonać dowolny kod, ale ponowne uruchomienie jest wbudowane w bibliotekę i często używane.
-
-\section{Podsumowanie.}
-Model aktorów jest prosty i zrozumiały. Pozwala na bezpiecznie programowanie współbieżne. Udostępnia nowy poziom abstrakcji - aktora. Pozwala tworzyć systemy, które w łatwy sposób mogą obsługiwać błędy aplikacji, sieciowe, sprzętowe. \mbox{Akka} ma wysoką wydajność, jest w pełni asynchroniczna i pozbawiona blokad. Pozwala na bardzo proste rozproszenie aplikacji. Istnieje do niej wiele rozszerzeń, np. do budowy klastra, do zapisu stanu aktora w bazie danych.
-
-Moja praca magisterka dotyczy opracowania transakcji lub mechanizmu dającego podobny efekt dla rozproszonej bazy danych Apache Cassandra. Model aktorów pozwoli na stworzenie asynchronicznego, wysoko wydajnego rozproszonego sterownika transakcji.
 
 
 
